@@ -11,14 +11,15 @@ Reproducibility: all randomness flows from a single NumPy Generator seeded
 with RANDOM_STATE = 42. Running this script twice produces an identical CSV.
 
 Usage:
-    python generate_customer_churn.py            # writes customer_churn.csv
-    python generate_customer_churn.py --out path.csv
+    python src/generate_customer_churn.py            # writes data/customer_churn.csv
+    python src/generate_customer_churn.py --out path.csv
 """
 
 from __future__ import annotations
 
 import argparse
 import sys
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -338,7 +339,8 @@ def report(df: pd.DataFrame) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", default="customer_churn.csv")
+    default_out = Path(__file__).resolve().parents[1] / "data" / "customer_churn.csv"
+    ap.add_argument("--out", default=str(default_out))
     args = ap.parse_args()
 
     df = generate()

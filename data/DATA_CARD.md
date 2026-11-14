@@ -3,7 +3,7 @@
 > **This dataset is entirely SYNTHETIC.** The generator script created every record from statistical rules and random draws. It contains no real customer data, and no record describes a real person or account. Any resemblance to real customers or companies is coincidental.
 
 - **File:** `customer_churn.csv` (10,000 rows × 21 columns, UTF-8, comma-separated, header row)
-- **Generator:** `generate_customer_churn.py` (Python 3, NumPy, Pandas), `random_state = 42`
+- **Generator:** `src/generate_customer_churn.py` (Python 3, NumPy, Pandas), `random_state = 42`
 - **Reproducibility:** re-running the script produces a byte-identical CSV (checked with md5).
 - **Task:** binary classification. Target = `churn` (Yes/No)
 

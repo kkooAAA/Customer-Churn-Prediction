@@ -1,0 +1,9 @@
+# Trained model (regenerate with: python src/train.py)
+models/*.joblib
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/

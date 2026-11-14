@@ -1,0 +1,6 @@
+numpy
+pandas
+scikit-learn>=1.5  # TunedThresholdClassifierCV
+joblib
+matplotlib
+jupyter  # only for notebooks/
